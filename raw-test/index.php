@@ -1,11 +1,26 @@
 <?php
+$testFolder = dirname( __FILE__ );
+
+if ( file_exists( $testFolder . "/credentials-private.ini" ) )
+{
+    $credentials = parse_ini_file( $testFolder . "/credentials-private.ini" );
+}
+else if ( file_exists( $testFolder . "/credentials.ini" ) )
+{
+    $credentials = parse_ini_file( $testFolder . "/credentials.ini" );
+}
+else
+{
+    die ( 'No credentials file found!' );
+}
+
 if ( ! class_exists( 'EnvioPackApi' ) )
 {
     require_once( dirname( __FILE__ ) . '../lib/enviopack.php' );
 }
 
-$apiKey    = "";
-$secretKey = "";
+$apiKey    = $credentials["api_key"];
+$secretKey = $credentials["secret_key"];
 
 /***********************************************/
 /* DO NOT CHANGE ANITHING ABOVE THIS LINE
@@ -28,7 +43,7 @@ $city         = "Munro, Vicente Lopez";
 $orderAmmount = '525.50';
 $payed        = true;
 $shipmentIDS  = array( '337449' );
-$courier = 'oca';
+$courier      = 'oca';
 
 echo '<h3>check_credentials</h3>';
 try
@@ -186,10 +201,10 @@ catch ( Exception $e )
 
 $params = array
 (
-    'provincia'     => $provinciaId,
-    'codigo_postal' => $zip,
-    'peso'          => $weight,
-    'paquetes'      => $packages,
+    'provincia'       => $provinciaId,
+    'codigo_postal'   => $zip,
+    'peso'            => $weight,
+    'paquetes'        => $packages,
     'direccion_envio' => $sourceAddressId,
 );
 
