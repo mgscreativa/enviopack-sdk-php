@@ -1,0 +1,23 @@
+{
+	"name": "enviopack/sdk",
+	"description": "EnvíoPack SDK Api Integration Library",
+	"keywords": ["enviopack", "sdk"],
+	"authors": [
+		{
+			"name": "Martin Briglia",
+			"email": "martin@mgscreativa.com"
+		},
+		{
+			"name": "MGS Creativa",
+			"email": "info@mgscreativa.com"
+		}
+	],
+	"require": {
+		"ext-curl": "*"
+	},
+	"autoload": {
+		"classmap": [
+			"lib/enviopack.php"
+		]
+	}
+}
