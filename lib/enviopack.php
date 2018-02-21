@@ -10,7 +10,7 @@
 $GLOBALS["LIB_BASE_PATH"] = dirname( __FILE__ );
 
 class EnvioPackApi {
-    const version = "0.1.2";
+    const version = "0.1.3";
 
     private $api_key;
     private $secret_key;
@@ -63,7 +63,7 @@ class EnvioPackApi {
 
         if ( $access_data["status"] != 200 )
         {
-            throw new MercadoPagoException ( $access_data['response']['message'], $access_data['status'] );
+            throw new EnvioPackApiException ( $access_data['response']['message'], $access_data['status'] );
         }
 
         $this->access_data = $access_data['response'];
