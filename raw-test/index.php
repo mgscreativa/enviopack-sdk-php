@@ -16,7 +16,7 @@ else
 
 if ( ! class_exists( 'EnvioPackApi' ) )
 {
-    require_once( dirname( __FILE__ ) . '../lib/enviopack.php' );
+    require_once( dirname( __FILE__ ) . '/../lib/enviopack.php' );
 }
 
 $apiKey    = $credentials["api_key"];
