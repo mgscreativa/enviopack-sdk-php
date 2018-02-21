@@ -14,7 +14,7 @@
 From command line
 
 ```
-composer require enviopack/sdk:0.1.0
+composer require enviopack/sdk:0.1.2
 ```
 
 As a dependency in your project's composer.json
@@ -22,7 +22,7 @@ As a dependency in your project's composer.json
 ```json
 {
     "require": {
-        "enviopack/sdk": "0.1.0"
+        "enviopack/sdk": "0.1.2"
     }
 }
 ```
