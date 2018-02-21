@@ -1,6 +1,7 @@
 {
 	"name": "enviopack/sdk",
 	"description": "EnvíoPack SDK Api Integration Library",
+  "license": "MIT",
 	"keywords": ["enviopack", "sdk"],
 	"authors": [
 		{
@@ -19,5 +20,5 @@
 		"classmap": [
 			"lib/enviopack.php"
 		]
-	}
+	},
 }
