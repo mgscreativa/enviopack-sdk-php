@@ -10,7 +10,7 @@
 $GLOBALS["LIB_BASE_PATH"] = dirname( __FILE__ );
 
 class EnvioPackApi {
-    const version = "0.1.3";
+    const version = "0.1.4";
 
     private $api_key;
     private $secret_key;

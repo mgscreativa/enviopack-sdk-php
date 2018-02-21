@@ -14,7 +14,7 @@
 From command line
 
 ```
-composer require enviopack/sdk:0.1.3
+composer require enviopack/sdk:0.1.4
 ```
 
 As a dependency in your project's composer.json
@@ -22,7 +22,7 @@ As a dependency in your project's composer.json
 ```json
 {
     "require": {
-        "enviopack/sdk": "0.1.3"
+        "enviopack/sdk": "0.1.4"
     }
 }
 ```
@@ -42,7 +42,7 @@ As a dependency in your project's composer.json
 ```php
 require_once ('enviopack.php');
 
-$ep = new EP ("API_KEY", "SECRET_KEY");
+$ep = new EnvioPackApi ("API_KEY", "SECRET_KEY");
 ```
 
 ### Methods
