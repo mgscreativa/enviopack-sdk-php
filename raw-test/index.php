@@ -23,7 +23,7 @@ $apiKey    = $credentials["api_key"];
 $secretKey = $credentials["secret_key"];
 
 /***********************************************/
-/* DO NOT CHANGE ANITHING ABOVE THIS LINE
+/* DO NOT CHANGE ANITHING BELOW THIS LINE
 /***********************************************/
 
 $ep = new EnvioPackApi( $apiKey, $secretKey );
