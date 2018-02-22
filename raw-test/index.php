@@ -418,7 +418,7 @@ catch ( Exception $e )
 
 $params = array
 (
-    "webhook_url" => $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['HTTP_HOST'] . "/enviopack/index.php",
+    "webhook_url" => $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['HTTP_HOST'] . "/enviopack-sdk-php/raw-test/enviopack_webhook_notification.php",
 );
 
 echo '<h3>set_api_config</h3>';

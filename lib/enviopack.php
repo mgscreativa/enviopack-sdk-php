@@ -10,7 +10,7 @@
 $GLOBALS["LIB_BASE_PATH"] = dirname( __FILE__ );
 
 class EnvioPackApi {
-    const version = "0.1.6";
+    const version = "0.1.7";
 
     private $api_key;
     private $secret_key;
@@ -58,7 +58,7 @@ class EnvioPackApi {
             "data"    => $app_client_values,
             "headers" => array(
                 "content-type" => "application/x-www-form-urlencoded",
-            )
+            ),
         ) );
 
         if ( $access_data["status"] != 200 )
