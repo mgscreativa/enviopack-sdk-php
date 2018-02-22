@@ -157,48 +157,6 @@ catch ( Exception $e )
     echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
 }
 
-echo '<h3>get_couriers</h3>';
-try
-{
-    $result = $ep->get_couriers();
-
-    echo '<pre>';
-    print_r( $result );
-    echo '</pre>';
-}
-catch ( Exception $e )
-{
-    echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
-}
-
-echo '<h3>get_courier_branches</h3>';
-try
-{
-    $result = $ep->get_courier_branches( $courier );
-
-    echo '<pre>';
-    print_r( $result );
-    echo '</pre>';
-}
-catch ( Exception $e )
-{
-    echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
-}
-
-echo '<h3>get_courier_services</h3>';
-try
-{
-    $result = $ep->get_courier_services( $courier );
-
-    echo '<pre>';
-    print_r( $result );
-    echo '</pre>';
-}
-catch ( Exception $e )
-{
-    echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
-}
-
 $params = array
 (
     'provincia'       => $provinciaId,
@@ -235,6 +193,48 @@ echo '<h3>quote_branch_delivery_price</h3>';
 try
 {
     $result = $ep->quote_branch_delivery_price( $params );
+
+    echo '<pre>';
+    print_r( $result );
+    echo '</pre>';
+}
+catch ( Exception $e )
+{
+    echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
+}
+
+echo '<h3>get_couriers</h3>';
+try
+{
+    $result = $ep->get_couriers();
+
+    echo '<pre>';
+    print_r( $result );
+    echo '</pre>';
+}
+catch ( Exception $e )
+{
+    echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
+}
+
+echo '<h3>get_courier_branches</h3>';
+try
+{
+    $result = $ep->get_courier_branches( $courier );
+
+    echo '<pre>';
+    print_r( $result );
+    echo '</pre>';
+}
+catch ( Exception $e )
+{
+    echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
+}
+
+echo '<h3>get_courier_services</h3>';
+try
+{
+    $result = $ep->get_courier_services( $courier );
 
     echo '<pre>';
     print_r( $result );
