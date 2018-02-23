@@ -59,12 +59,31 @@ catch ( Exception $e )
     echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
 }
 
-echo '<h3>source_address</h3>';
+echo '<h3>get_source_address</h3>';
 try
 {
-    $result = $ep->source_address();
+    $result = $ep->get_source_address();
 
     $sourceAddressId = $result['response'][0]['id'];
+    echo '<pre>';
+    print_r( $result );
+    echo '</pre>';
+}
+catch ( Exception $e )
+{
+    echo '<p><strong>Error ' . $e->getCode() . '</strong>: ' . $e->getMessage() . '</p>';
+}
+
+$params = array
+(
+    'id' => $sourceAddressId,
+);
+
+echo '<h3>get_source_address (by ID)</h3>';
+try
+{
+    $result = $ep->get_source_address($params);
+
     echo '<pre>';
     print_r( $result );
     echo '</pre>';

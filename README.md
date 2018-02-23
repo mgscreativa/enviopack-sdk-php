@@ -14,7 +14,7 @@
 From command line
 
 ```
-composer require enviopack/sdk:0.1.7
+composer require enviopack/sdk:0.1.8
 ```
 
 As a dependency in your project's composer.json
@@ -22,7 +22,7 @@ As a dependency in your project's composer.json
 ```json
 {
     "require": {
-        "enviopack/sdk": "0.1.7"
+        "enviopack/sdk": "0.1.8"
     }
 }
 ```
@@ -55,10 +55,23 @@ $result = $ep->check_credentials();
 print_r( $result );
 ```
 
-#### Get store source address
+#### Get default store source address
 
 ```php
 $result = $ep->source_address();
+
+print_r( $result );
+```
+
+#### Get source address by ID
+
+```php
+$params = array
+(
+    'id' => $sourceAddressId,
+);
+
+$result = $ep->source_address( $params );
 
 print_r( $result );
 ```

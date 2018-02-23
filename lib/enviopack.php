@@ -10,7 +10,7 @@
 $GLOBALS["LIB_BASE_PATH"] = dirname( __FILE__ );
 
 class EnvioPackApi {
-    const version = "0.1.7";
+    const version = "0.1.8";
 
     private $api_key;
     private $secret_key;
@@ -84,12 +84,12 @@ class EnvioPackApi {
         }
     }
 
-    public function source_address() {
+    public function get_source_address($params = null) {
+        $params["access_token"] = $this->get_access_token();
+
         $request = array(
             "uri"    => "/direcciones-de-envio",
-            "params" => array(
-                "access_token" => $this->get_access_token(),
-            ),
+            "params" => $params,
         );
 
         $response = EPRestClient::get( $request );
